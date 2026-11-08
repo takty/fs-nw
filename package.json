@@ -1,0 +1,43 @@
+{
+	"name": "fs-nw",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		"./base": {
+			"types": "./dist/fs-base.min.d.ts",
+			"import": "./dist/fs-base.min.js"
+		},
+		"./node": {
+			"types": "./dist/fs-node.min.d.ts",
+			"import": "./dist/fs-node.min.js"
+		},
+		"./web": {
+			"types": "./dist/fs-web.min.d.ts",
+			"import": "./dist/fs-web.min.js"
+		}
+	},
+	"scripts": {
+		"terminal": "yarn build:lib && node src/terminal-node.js",
+		"dev": "yarn build:lib && vite",
+		"build": "yarn build:lib && vite build",
+		"build:lib": "node build.mjs",
+		"typecheck": "tsc --noEmit",
+		"docs": "yarn build",
+		"preview": "vite preview",
+		"test": "yarn build:lib && node --test test/*.test.mjs",
+		"test:web": "yarn build && node test/headless.mjs",
+		"prepack": "yarn build:lib"
+	},
+	"devDependencies": {
+		"@types/node": "^26.6.6",
+		"esbuild": "^0.28.2",
+		"playwright-core": "^1.65.0",
+		"typescript": "^7.0.2",
+		"vite": "^8.3.5"
+	},
+	"packageManager": "yarn@4.18.0",
+	"files": [
+		"dist"
+	]
+}

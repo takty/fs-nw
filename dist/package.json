@@ -1,0 +1,24 @@
+{
+  "name": "fs-nw",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A shared filesystem API for Node.js and the Web.",
+  "exports": {
+    "./base": {
+      "types": "./fs-base.min.d.ts",
+      "import": "./fs-base.min.js"
+    },
+    "./node": {
+      "types": "./fs-node.min.d.ts",
+      "import": "./fs-node.min.js"
+    },
+    "./web": {
+      "types": "./fs-web.min.d.ts",
+      "import": "./fs-web.min.js"
+    }
+  },
+  "files": [
+    "*.min.js",
+    "*.min.d.ts"
+  ]
+}

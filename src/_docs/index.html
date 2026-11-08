@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>File System Terminal</title>
+</head>
+<body>
+	<main>
+		<section class="root"><button id="open" type="button">Select root folder</button><span id="root-name">Not selected</span></section>
+		<section class="terminal" aria-label="Terminal">
+			<div id="output" role="log" aria-label="Command output" aria-live="polite" tabindex="0"></div>
+			<form id="command-form" autocomplete="off"><label id="prompt" for="command">/ $</label><input id="command" aria-label="Command" spellcheck="false" autocapitalize="off" disabled></form>
+		</section>
+		<p id="status" role="status">Disconnected</p>
+	</main>
+	<script type="module" src="./main.js"></script>
+</body>
+</html>

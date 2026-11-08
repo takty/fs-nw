@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>File System Terminal</title>
+  <script type="module" crossorigin src="./assets/index-CHhPNdDP.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-rvLC438X.css">
+</head>
+<body>
+	<main>
+		<section class="root"><button id="open" type="button">Select root folder</button><span id="root-name">Not selected</span></section>
+		<section class="terminal" aria-label="Terminal">
+			<div id="output" role="log" aria-label="Command output" aria-live="polite" tabindex="0"></div>
+			<form id="command-form" autocomplete="off"><label id="prompt" for="command">/ $</label><input id="command" aria-label="Command" spellcheck="false" autocapitalize="off" disabled></form>
+		</section>
+		<p id="status" role="status">Disconnected</p>
+	</main>
+</body>
+</html>
